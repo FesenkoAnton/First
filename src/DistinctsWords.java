@@ -16,12 +16,12 @@ public class DistinctsWords {
         this.file = file;
     }
 
-    public Set getWordList(){
+    public Set getWordList() {
         getDistinctWordList();
         return wordList;
     }
 
-    private void getDistinctWordList(){
+    private void getDistinctWordList() {
         wordList = new HashSet<>();
         try (FileReader fileReader = new FileReader(new File(String.valueOf(file)));
              BufferedReader br = new BufferedReader(fileReader)) {
